@@ -27,6 +27,7 @@ This project is a custom WordPress website implementation based on the provided 
 6. Activate the Astra Child theme.
 7. Install Polylang plugin and add the languages to create language navigation.
 8. Create some Pages and Posts for them to appear in the nav menu and pullup respectively.
+9. Add featured image and excerpt text to Post.
 
 ## Contributors
 
