@@ -1,0 +1,47 @@
+version: '3'
+
+services:
+  nginx:
+    image: nginx
+    ports:
+      - "80:80"
+    volumes:
+      - ./nginx/default.conf:/etc/nginx/conf.d/default.conf
+    networks:
+      - nginx-proxy
+
+  wordpress:
+    image: wordpress
+    ports:
+      - "8000:80"
+    volumes:
+      - wordpress_data:/var/www/html
+      - ./wordpress_files:/var/www/html
+    environment:
+      WORDPRESS_DB_HOST: db
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: your_wordpress_db_password
+      WORDPRESS_DB_NAME: wordpress
+    networks:
+      - nginx-proxy
+      - default
+
+  db:
+    image: mysql:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: your_mysql_root_password
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: your_wordpress_db_password
+    networks:
+      - default
+
+volumes:
+  wordpress_data:
+  db_data:
+
+networks:
+  nginx-proxy:
+    external: true

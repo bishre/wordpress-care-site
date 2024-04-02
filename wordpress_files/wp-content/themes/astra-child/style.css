@@ -1,0 +1,274 @@
+/**
+Theme Name: Astra Child
+Author: Brainstorm Force
+Author URI: http://wpastra.com/about/
+Description: Astra is the fastest, fully customizable & beautiful theme suitable for blogs, personal portfolios and business websites. It is very lightweight (less than 50KB on frontend) and offers unparalleled speed. Built with SEO in mind, Astra comes with schema.org code integrated so search engines will love your site. Astra offers plenty of sidebar options and widget areas giving you a full control for customizations. Furthermore, we have included special features and templates so feel free to choose any of your favorite page builder plugin to create pages flexibly. Some of the other features: # WooCommerce Ready # Responsive # Compatible with major plugins # Translation Ready # Extendible with premium addons # Regularly updated # Designed, Developed, Maintained & Supported by Brainstorm Force. Looking for a perfect base theme? Look no further. Astra is fast, fully customizable and beautiful theme!
+Version: 1.0.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: astrachild
+Template: astra
+*/
+
+html {
+  margin-top: 0 !important;
+  padding: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  color: black;
+}
+
+h1, h2, h3, h4, h5, h6, a {
+  color: #5D328C;
+}
+
+.button, button {
+  padding: 1rem;
+  background-color: #5D328C;
+  border-color: #5D328C;
+  color: #FFFF01;
+  text-transform: uppercase;
+}
+
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.2rem 2rem;
+
+  .main-navigation {
+    width: auto;
+    .menu ul {
+      display: flex;
+      justify-content: space-around;
+
+      .menu-item {
+        margin-right: 1rem;
+        font-weight: bold;
+
+        .menu-link {
+          border: none;
+        }
+      }
+    }
+  }
+
+  .language-switcher {
+    display: flex;
+    list-style: none;
+
+    li:not(:last-child) {
+      &::after {
+        content: "/";
+        margin: 0 0.5rem;
+      }
+    }
+  }
+}
+
+.container {
+  padding: 2rem 4rem;
+}
+
+.hero-block {
+  position: relative;
+
+  .image5 {
+    position: absolute;
+    bottom: 0;
+    transform: scale(0.5);
+    transform-origin: left;
+  }
+}
+.hero-content {
+  display: flex;
+
+  .hero-text {
+    align-self: center;
+
+    & > h1 {
+      font-size: 5.5rem;
+      line-height: 1.2;
+    }
+
+    & > p {
+      width: 60%;
+      padding: 1rem;
+      font-size: 1.5rem;
+    }
+
+    .cta-button {
+      background-color: #fff;
+      border: 1px solid #5D328C;
+      color: #5D328C;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 25px;
+        margin-left: 1rem;
+        vertical-align: bottom;
+        background-image: url('./images/Play.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .hero-image {
+    overflow: visible;
+    position: relative;
+    transform: scale(0.8);
+
+    .image1 {
+      position: relative;
+      z-index: 10;
+    }
+
+    .image2 {
+      position: absolute;
+      bottom: 0;
+      right: 8rem;
+      z-index: 5;
+    }
+
+    .image3 {
+      position: absolute;
+      bottom: 0;
+      right: -8rem;
+      z-index: 5;
+    }
+
+    .image4 {
+      position: absolute;
+      top: 0rem;
+      left: -5rem;
+      z-index: 5;
+    }
+  }
+}
+
+.media-block {
+  position: relative;
+  padding: 6rem 0;
+  background-color: #2AE2A2;
+
+  .media-wrapper {
+    position: relative;
+    width: 60%;
+    margin: 0 auto;
+  }
+
+  .youtube-video {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio (height/width = 9/16 = 0.5625) */
+    overflow: hidden;
+    z-index: 10;
+  }
+
+  .youtube-video iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .media1 {
+    position: absolute;
+    right: -20%;
+    top: -25%;
+    z-index: 0;
+    transform: scale(0.8);
+  }
+
+  .media2 {
+    position: absolute;
+    right: -20%;
+    bottom: -25%;
+    z-index: 0;
+    transform: scale(0.8);
+  }
+
+  .media3 {
+    position: absolute;
+    left: -25%;
+    top: 15%;
+    z-index: 0;
+    transform: scale(0.8);
+  }
+}
+
+.articles-block {
+  position: relative;
+  background-color: #FAF5FC;
+  .posts {
+    display: flex;
+    justify-content: space-between;
+
+    .article-pullup {
+      width: 30%;
+      background-color: #fff;
+    }
+
+    .entry-header {
+      margin: 0;
+      padding: 1rem;
+      h5 {
+        color: #5D328C;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+    }
+
+    .entry-content {
+      padding: 1rem;
+      font-size: 1.2rem;
+    }
+
+    .readmore {
+      font-size: 1rem;
+      padding: 0 1rem;
+
+      &::after {
+        content: "";
+        display: inline-block;
+        width: 25px;
+        height: 16px;
+        margin-left: 1rem;
+        vertical-align: middle;
+        background-image: url('./images/arrow.png');
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  .posts1 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    transform: scale(0.7);
+    transform-origin: right;
+  }
+
+  .posts2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scale(0.6);
+    transform-origin: left;
+  }
+}
+
+.posts-page-link {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0 5rem;
+
+  .button {
+    padding: 0;
+  }
+}
